@@ -1,0 +1,29 @@
+digraph G {
+const6 [opcode=const, constVal=9];
+const8 [opcode=const, constVal=4];
+a_i [opcode=input];
+ashr9 [opcode=ashr];
+b_i_out [opcode=output];
+c_i [opcode=input];
+m_i [opcode=input];
+square [opcode=mul];
+mul2 [opcode=mul];
+mul3 [opcode=mul];
+mul4 [opcode=mul];
+mul5 [opcode=mul];
+mul7 [opcode=mul];
+a_i -> mul2;
+a_i -> mul3;
+a_i -> mul4;
+ashr9 -> b_i_out;
+c_i -> square;
+const6 -> mul7;
+const8 -> ashr9;
+m_i -> mul5;
+square -> mul2;
+mul2 -> mul3;
+mul3 -> mul4;
+mul4 -> mul5;
+mul5 -> mul7;
+mul7 -> ashr9;
+}

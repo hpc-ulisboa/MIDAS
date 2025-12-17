@@ -1,0 +1,13 @@
+digraph G {
+add3 [opcode=add];
+const1 [opcode=const, constVal=50];
+mul2 [opcode=mul];
+x_i [opcode=input];
+y_i [opcode=input];
+z_i_out [opcode=output];
+add3 -> z_i_out;
+const1 -> mul2 [operand=1];
+mul2 -> add3 [operand=0];
+x_i -> mul2 [operand=0];
+y_i -> add3 [operand=1];
+}

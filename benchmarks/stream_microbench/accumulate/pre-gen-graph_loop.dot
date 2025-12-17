@@ -1,0 +1,18 @@
+digraph G {
+    i0_a(i+1) [opcode=input];
+    i0_b(i-1) [opcode=input];
+    i0_c(i) [opcode=input];
+    i0_add [opcode=add];
+    i0_mul [opcode=mul];
+    o0_c(i) [opcode=output];
+    i1_add [opcode=add];
+    sum [opcode=output];
+    i0_a(i+1) -> i0_add;
+    i0_b(i-1) -> i0_add;
+    i0_add -> i0_mul;
+    i0_c(i) -> i0_mul;
+    i0_mul -> o0_c(i);
+    i0_mul -> i1_add;
+    i1_add -> i1_add;
+    i1_add -> sum;
+}

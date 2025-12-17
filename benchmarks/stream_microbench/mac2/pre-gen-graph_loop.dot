@@ -1,0 +1,32 @@
+digraph G {
+    i0_a(i) [opcode=input];
+    i0_b(i) [opcode=input];
+    i1_c(i) [opcode=input];
+    i1_d(i) [opcode=input];
+    i1_a(i) [opcode=input];
+    i0_mul [opcode=mul];
+    i1_mul [opcode=mul];
+    i0_add [opcode=add];
+    i3_mul [opcode=mul];
+    i2_mul [opcode=mul];
+    i1_add [opcode=add];
+    i2_add [opcode=add];
+    sum [opcode=output];
+    sum2 [opcode=output];
+    i0_a(i) -> i0_mul;
+    i0_b(i) -> i0_mul;
+    i0_mul -> i0_add;
+    i0_add -> i0_add;
+    i0_add -> sum;
+    i1_c(i) -> i1_mul;
+    i1_d(i) -> i1_mul;
+    i1_mul -> i3_mul;
+    i0_mul -> i3_mul;
+    i1_mul -> i2_mul;
+    i1_a(i) -> i2_mul;
+    i2_mul -> i1_add;
+    i3_mul -> i1_add;
+    i1_add -> i2_add;
+    i2_add -> i2_add;
+    i2_add -> sum2;
+}

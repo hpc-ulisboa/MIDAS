@@ -1,0 +1,32 @@
+digraph G {
+const12 [opcode=const, constVal=12];
+a_i [opcode=input];
+a_i_1 [opcode=input];
+add1 [opcode=add];
+add2 [opcode=add];
+b_i [opcode=input];
+b_i_3 [opcode=input];
+b0 [opcode=input];
+b3 [opcode=input];
+mul2 [opcode=mul];
+mul3 [opcode=mul];
+mul4 [opcode=mul];
+mul5 [opcode=mul];
+acc [opcode=add];
+sum_output [opcode=output];
+a_i -> add1;
+a_i_1 -> add1;
+b_i -> add2;
+b_i_3 -> add2;
+b0 -> mul2;
+b3 -> mul2;
+add1 -> mul3;
+add2 -> mul3;
+mul3 -> mul4;
+mul2 -> mul4;
+mul4 -> mul5;
+const12 -> mul5;
+mul5 -> acc;
+acc -> acc;
+acc -> sum_output;
+}

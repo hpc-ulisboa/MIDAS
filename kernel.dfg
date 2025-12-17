@@ -1,0 +1,13 @@
+6
+add3 ADD 1 2 1 0 0 0
+mul2 MUL 1 2 1 0 1 0
+x_i STREAM_IN 1 0 1 0 0 0
+y_i STREAM_IN 1 0 1 0 0 0
+z_i_out STREAM_OUT 1 1 0 0 0 0
+const1 CONST 1 0 1 0 0 50
+2 4 5 
+6 3 1 
+2 
+1 
+1 
+2 

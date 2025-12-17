@@ -1,0 +1,19 @@
+import_dfg kernel.dfg
+import_cgra design.cmpa
+display_arch
+
+place_and_route 1
+display_cgra
+
+display_IOs
+exec_time
+throughput_analysis
+util_ratio
+ipc_analysis
+ii_analysis
+vector_analysis
+pr_summary
+
+export_mapping res
+
+quit

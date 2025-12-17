@@ -1,0 +1,30 @@
+digraph G {
+    const_ai [opcode=const];
+    i0_a(i) [opcode=input];
+    const_ai1 [opcode=const];
+    i1_a(i+1) [opcode=input];
+    i0_mul [opcode=mul];
+    i1_mul [opcode=mul];
+    i2_add [opcode=add];
+    i2_bi [opcode=output];
+    i2_a(i+2) [opcode=input];
+    i2_a(i+3) [opcode=input];
+    i2_mul [opcode=mul];
+    i3_mul [opcode=mul];
+    i3_add [opcode=add];
+    i3_bi [opcode=output];
+    i0_a(i) -> i0_mul;
+    i1_a(i+1) -> i1_mul;
+    const_ai -> i0_mul;
+    const_ai1 -> i1_mul;
+    i0_mul -> i2_add;
+    i1_mul -> i2_add;
+    i2_add -> i2_bi;
+    i2_a(i+2) -> i2_mul;
+    i2_a(i+3) -> i3_mul;
+    const_ai -> i2_mul;
+    const_ai1 -> i3_mul;
+    i2_mul -> i3_add;
+    i3_mul -> i3_add;
+    i3_add -> i3_bi;
+}

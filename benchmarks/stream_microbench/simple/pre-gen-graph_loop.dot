@@ -1,0 +1,23 @@
+digraph G {
+a_i [opcode=input];
+a_i_1 [opcode=input];
+a_i_2 [opcode=input];
+add1 [opcode=add];
+add2 [opcode=add];
+add3 [opcode=add];
+b_i [opcode=input];
+b_i_1 [opcode=input];
+b_i_2 [opcode=input];
+c_i_1_out [opcode=output];
+c_i_2_out [opcode=output];
+c_i_out [opcode=output];
+a_i -> add1;
+a_i_1 -> add2;
+a_i_2 -> add3;
+add1 -> c_i_out;
+add2 -> c_i_1_out;
+add3 -> c_i_2_out;
+b_i -> add1;
+b_i_1 -> add2;
+b_i_2 -> add3;
+}
