@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 from mpa import *
 
-mpa = init_standard_cgra(2, 3, StreamPorts='all', mergeIOs=False)
+mpa = init_standard_cgra(rows=4, cols=4, StreamPorts='all', mergeIOs=False)
 
 #mpa.add_interconnect((1, 1), (2, 2), latency=1, export=True)
 
@@ -24,3 +24,4 @@ mpa.addRfReadPortsToAllPEs("OutputRegisters", n_output_registers)
 mpa.plot()
 
 mpa.export()
+
